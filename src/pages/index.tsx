@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Characters from "../components/Characters";
-// import Image from "next/image";
 
 const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>React Query</title>
+				<title>React Query with Rick and Morty</title>
 				<meta
 					name="description"
 					content="App to fetch data from the Rick and Morty API to play with React Query"

@@ -25,6 +25,9 @@ Patch:
 
 <!-- "In this commit I ..." -->
 
+### "Use React Query to fetch data"
+##### 003 - 15.08.2022, v0.1.2
+
 ### "Add basic fetch functionality"
 ##### 002 - 14.08.2022, v0.1.1
 

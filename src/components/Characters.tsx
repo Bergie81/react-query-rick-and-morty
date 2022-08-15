@@ -1,43 +1,45 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+import { useQuery } from "react-query";
+import { CharacterProps } from "../libs/types";
+import Character from "./Character";
+// -!!!
+// Comments show the standard way of fetching data from an API
+// -!!!
 
-interface Character {
-	created: String;
-	episode: Array<String>;
-	gender: String;
-	id: React.Key;
-	image: String;
-	location: String;
-	name: String;
-	origin: {
-		name: String;
-		url: String;
-	};
-	species: String;
-	status: String;
-	type: String;
-	url: String;
-}
-
-type CharactersProps = Array<Character>;
+// type CharactersProps = Array<Character>;
 
 const Characters = () => {
-	const [characters, setCharacters] = useState<CharactersProps>([]);
+	// const [characters, setCharacters] = useState<CharactersProps>([]);
 
 	const fetchCharacters = async () => {
 		const response = await fetch("https://rickandmortyapi.com/api/character");
 		const data = await response.json();
-		setCharacters(data.results);
-		console.log(data.results);
+		// setCharacters(data.results);
+		return data.results;
 	};
 
-	useEffect(() => {
-		fetchCharacters();
-	}, []);
+	// useEffect(() => {
+	// 	fetchCharacters();
+	// }, []);
 
+	const { data, status } = useQuery("characters", fetchCharacters);
+
+	if (status === "loading") {
+		return <div>Loading...</div>;
+	}
+
+	if (status === "error") {
+		return <div>Error</div>;
+	}
+
+	console.log("data", data);
 	return (
 		<div>
-			{characters.map((character) => (
+			{/* {characters.map((character) => (
 				<div key={character.id}> {character.name} </div>
+			))} */}
+			{data.map((character: CharacterProps) => (
+				<Character key={character.id} {...character} />
 			))}
 		</div>
 	);
