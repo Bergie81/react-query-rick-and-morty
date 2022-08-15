@@ -25,6 +25,9 @@ Patch:
 
 <!-- "In this commit I ..." -->
 
+### "Add pagination and loading & error status"
+##### 004 - 16.08.2022, v0.1.3
+
 ### "Use React Query to fetch data"
 ##### 003 - 15.08.2022, v0.1.2
 

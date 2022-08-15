@@ -5,7 +5,6 @@ const nextConfig = {
 	images: {
 		domains: ["rickandmortyapi.com"],
 	},
-	include: ["next-env.d.ts", "**/*.ts", "**/*.tsx", "additional.d.ts"],
 };
 
 module.exports = nextConfig;
