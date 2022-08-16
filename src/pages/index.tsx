@@ -13,12 +13,12 @@ const Home: NextPage = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="container mx-auto">
-				<h1 className="text-center text-5xl font-light my-8">
+			<main className="container mx-auto px-8">
+				<h1 className="my-8 mb-12 text-center text-5xl font-light">
 					React Query with Rick and Morty
 				</h1>
 				<Characters />
-			</div>
+			</main>
 		</>
 	);
 };

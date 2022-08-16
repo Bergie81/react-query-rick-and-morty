@@ -25,6 +25,9 @@ Patch:
 
 <!-- "In this commit I ..." -->
 
+### "Create basic card design"
+##### 005 - 17.08.2022, v0.1.4
+
 ### "Add pagination and loading & error status"
 ##### 004 - 16.08.2022, v0.1.3
 

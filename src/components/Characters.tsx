@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
-import { CharacterProps } from "../libs/types";
+import { CharacterProps } from "../types";
 import Character from "./Character";
 // -!!!
 // Comments show the standard way of fetching data from an API
@@ -47,8 +47,8 @@ const Characters = () => {
 	}
 
 	return (
-		<>
-			<div className="flex">
+		<div>
+			<div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
 				{/* {characters.map((character) => (
 				<div key={character.id}> {character.name} </div>
 			))} */}
@@ -73,7 +73,7 @@ const Characters = () => {
 					Next
 				</button>
 			</div>
-		</>
+		</div>
 	);
 };
 
